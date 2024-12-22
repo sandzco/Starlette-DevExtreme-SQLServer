@@ -5,12 +5,9 @@ from starlette.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
 from starlette.routing import Route, Mount
 from dbClass import dbs
-import sqlQrs, environ, json
+import sqlQrs, environ
 
 templates = Jinja2Templates(directory='templates')
-
-db = dbs()
-cursor = db.cursor
 
 def getData(sql):
     out=[]
@@ -31,7 +28,6 @@ async def gridPage(request : Request):
                                                     })
 
 async def orderData(request : Request):
-    jsonData = json.dumps([])
     return JSONResponse(getData(sqlQrs.orderSQL))
 
 routes = [    
