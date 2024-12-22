@@ -11,3 +11,4 @@ pip install -r requirements.txt
 #Run server after configuring DB credentials in environ.py
 python main.py
 ```
+Navigate to http://localhost:8000
