@@ -1,0 +1,23 @@
+* {
+    box-sizing: inherit;
+    }
+html {
+    height: 100%;
+    box-sizing: border-box;
+    }
+body {
+    height: 100%;
+    }
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    }
+.page-header,
+.page-body {
+    padding: 10px;
+    }
+
+.page-footer {
+    text-align: center;
+}
